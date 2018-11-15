@@ -39,7 +39,7 @@ pipeline{
  			stage('Build') {
       			steps {
       				withMaven(maven:'Maven'){
-        				sh 'mvn package'
+        				sh 'mvn install'
         			}
       		}	
 		  }
