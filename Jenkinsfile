@@ -43,5 +43,11 @@ pipeline{
         			}
       		}	
 		  }
+		  stage('Build Docker Image') {
+     			steps {
+      				sh "docker build -t account-app:${env.BUILD_ID} ."
+	 		}
+	 	}
+	 	  
 	 }
 }
