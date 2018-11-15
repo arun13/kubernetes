@@ -35,6 +35,13 @@ pipeline{
  					  }
  					}
  				}
-		   	}
-	  }
+ 			}
+ 			stage('Build') {
+      			steps {
+      				withMaven(maven:'Maven'){
+        				sh 'mvn package'
+        			}
+      		}	
+		  }
+	 }
 }
