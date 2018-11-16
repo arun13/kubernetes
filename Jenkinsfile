@@ -46,6 +46,7 @@ pipeline{
 		   stage('Build Account Service Docker Image') {
      			steps {
      				sh "cd account"
+     				sh "ls"
       				sh "docker build -t artaneja13/kubernetes:account ."
 	 		}
 	 	  }
