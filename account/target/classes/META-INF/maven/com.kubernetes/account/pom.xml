@@ -10,7 +10,7 @@
        <groupId>com.kubernetes</groupId>
        <artifactId>account-app</artifactId>
        <version>1.0</version>
-       <relativePath>..</relativePath>
+       <!-- >relativePath>..</relativePath-->
    </parent>
    <artifactId>account</artifactId>
 	<properties>
