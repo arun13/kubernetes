@@ -45,19 +45,17 @@ pipeline{
 		  }
 		   stage('Build Account Service Docker Image') {
      			steps {
-      				sh "docker build -f ./account/Dockerfile -t artaneja13/kubernetes:account ."
+      				sh "docker build -f ./account/Dockerfile -t artaneja13/kubernetes:account ./account"
 	 		}
 	 	  }
 	 	   stage('Build Account Deposit Service Docker Image') {
      			steps {
-     				sh "cd account-deposit"
-      				sh "docker build -f ./account-deposit/Dockerfile -t artaneja13/kubernetes:account-deposit ."
+     				sh "docker build -f ./account-deposit/Dockerfile -t artaneja13/kubernetes:account-deposit ./account-deposit"
 	 		}
 	 	  }
 	 	   stage('Build Account Withdrawel Service Docker Image') {
      			steps {
-     				sh "cd account-withdrawel"
-      				sh "docker build -f ./account-withdrawel/Dockerfile -t artaneja13/kubernetes:account-withdrawel ."
+      				sh "docker build -f ./account-withdrawel/Dockerfile -t artaneja13/kubernetes:account-withdrawel ./account-withdrawel"
 	 		}
 	 	  }
 	 	  
