@@ -43,11 +43,25 @@ pipeline{
         			}
       		}	
 		  }
-		  stage('Build Docker Image') {
+		   stage('Build Account Service Docker Image') {
      			steps {
-      				sh "docker build -t account-app:${env.BUILD_ID} ."
+     				sh "cd account"
+      				sh "docker build -t artaneja13/kubernetes:account ."
 	 		}
-	 	}
+	 	  }
+	 	   stage('Build Account Deposit Service Docker Image') {
+     			steps {
+     				sh "cd account-deposit"
+      				sh "docker build -t artaneja13/kubernetes:account-deposit ."
+	 		}
+	 	  }
+	 	   stage('Build Account Withdrawel Service Docker Image') {
+     			steps {
+     				sh "cd account-withdrawel"
+      				sh "docker build -t artaneja13/kubernetes:account-withdrawel ."
+	 		}
+	 	  }
+	 	  
 	 	  
 	 }
 }
