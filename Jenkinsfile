@@ -55,11 +55,13 @@ pipeline{
 	 	  }
 	 	   stage('Build Account Deposit Service Docker Image') {
      			steps {
+     			echo "testing1"
      			//	sh "docker build -f ./account-deposit/Dockerfile -t artaneja13/kubernetes:account-deposit ./account-deposit"
 	 		}
 	 	  }
 	 	   stage('Build Account Withdrawel Service Docker Image') {
      			steps {
+     			echo "testing2"
       			//	sh "docker build -f ./account-withdrawel/Dockerfile -t artaneja13/kubernetes:account-withdrawel ./account-withdrawel"
 	 		}
 	 	  }
