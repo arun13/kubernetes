@@ -46,7 +46,7 @@ pipeline{
 		   stage('Build Account Service Docker Image') {
      			steps {
      				
-     				def customImage = docker.build("artaneja13/kubernetes:account:${env.BUILD_ID}","./account/Dockerfile")
+     				def customImage = docker.build("artaneja13/kubernetes:account","./account/Dockerfile")
       			//	sh "docker build -f ./account/Dockerfile -t artaneja13/kubernetes:account ./account"
 	 		}
 	 	  }
