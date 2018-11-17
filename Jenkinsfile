@@ -45,13 +45,14 @@ pipeline{
 		  }
 		   stage('Build Account Service Docker Image') {
      			steps {
-     				
+     				script{
      				def customImage = docker.build("artaneja13/kubernetes:account","./account/Dockerfile")	
      			    //def browsers = ['chrome', 'firefox']
                     //for (int i = 0; i < browsers.size(); ++i) {
                     echo "Testing the ${browsers[i]} browser"
                     //}
       			    //sh "docker build -f ./account/Dockerfile -t artaneja13/kubernetes:account ./account"
+      			    }
 	 		}
 	 	  }
 	 	   stage('Build Account Deposit Service Docker Image') {
