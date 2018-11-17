@@ -46,7 +46,7 @@ pipeline{
 		   stage('Build Account Service Docker Image') {
      			steps {
      				script{
-     				def customImage = docker.build("artaneja13/kubernetes:account","./account/Dockerfile")	
+     				def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
      			    //def browsers = ['chrome', 'firefox']
                     //for (int i = 0; i < browsers.size(); ++i) {
                     echo "Testing the ${browsers[i]} browser"
