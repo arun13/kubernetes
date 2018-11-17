@@ -45,7 +45,10 @@ pipeline{
 		  }
 		   stage('Build Account Service Docker Image') {
      			steps {
-     			agent any
+     				step{
+     				    
+     				
+
      				script{
      				//def customImage = docker.build("artaneja13/kubernetes:account","./account/Dockerfile")
      				
@@ -54,6 +57,7 @@ pipeline{
                         echo "Testing the ${browsers[i]} browser"
                  //   }
       			//	sh "docker build -f ./account/Dockerfile -t artaneja13/kubernetes:account ./account"
+      			}
       			}
 	 		}
 	 	  }
