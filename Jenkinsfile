@@ -47,6 +47,7 @@ pipeline{
      			steps {
      			timeout(time: 1, unit: 'MINUTES') {
      				script{
+     				sleep(10)
      				//def customImage = docker.build("artaneja13/kubernetes:account","./account/Dockerfile")	
      			    //def browsers = ['chrome', 'firefox']
                     //for (int i = 0; i < browsers.size(); ++i) {
