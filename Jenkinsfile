@@ -45,6 +45,7 @@ pipeline{
 		  }
 		   stage('Build Account Service Docker Image') {
      			steps {
+     			agent any
      				script{
      				//def customImage = docker.build("artaneja13/kubernetes:account","./account/Dockerfile")
      				
