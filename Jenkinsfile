@@ -46,7 +46,7 @@ pipeline{
 		   stage('Build Account Service Docker Image') {
      			steps {
      				script{
-		     				 withEnv(['DOCKER_CONFIG=${WORKSPACE}/.docker',"DOCKER_REGISTRY=${dockerRegistry}"]) {
+		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
 		      				 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPassword')]) {
 		      				 sh "docker login -u ar.taneja@gmail.com -p ${dockerHubPassword}"
