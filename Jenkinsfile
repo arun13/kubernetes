@@ -3,14 +3,14 @@ pipeline{
     	stages{
     	    stage('Compile'){
     	        steps{
-		   	        withMaven(maven:'Maven'){
+		   	        withMaven(maven:'maven'){
 		   	         sh 'mvn clean compile'
     				}            
     	        }
     	    }
        	    stage('Unit Testing'){
     	        steps{
-		   	        withMaven(maven:'Maven'){
+		   	        withMaven(maven:'maven'){
 		   	         sh 'mvn test'
     				}            
     	        }
@@ -38,7 +38,7 @@ pipeline{
  			}
  			stage('Build') {
       			steps {
-      				withMaven(maven:'Maven'){
+      				withMaven(maven:'maven'){
         				sh 'mvn install'
         			}
       		}	
@@ -46,6 +46,7 @@ pipeline{
 		   stage('Build Account Service Docker Image') {
      			steps {
      				script{
+     						 def dockerRegistry = "hub.docker.com/"
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
 		      				 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPassword')]) {
