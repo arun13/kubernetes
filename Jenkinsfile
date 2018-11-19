@@ -49,11 +49,10 @@ pipeline{
      						 def dockerRegistry = "https://hub.docker.com"
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
-		      				 withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerHubPassword')]) {
+		      				 withCredentials([string(credentialsId: 'docker-hub', variable: 'dockerHubPassword')]) {
 		      				 sh 'echo "push"'
-		      				 sh "docker login -u ar.taneja13@gmail.com -p ${dockerHubPassword}"
-		      				
-		      				 customImage.push()
+		      				 //sh "docker login -u ar.taneja13@gmail.com -p ${dockerHubPassword}"
+		      				 //customImage.push()
 				 	       		}
      			    //def browsers = ['chrome', 'firefox']
                     //for (int i = 0; i < browsers.size(); ++i) {
