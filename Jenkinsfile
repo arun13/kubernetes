@@ -50,7 +50,7 @@ pipeline{
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
-		      				 sh "docker push"
+		      				 sh "docker push artaneja13/kubernetes:account"
 		      				 //customImage.push()
 				 	       		}
 				 	       		}
