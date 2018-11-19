@@ -53,12 +53,11 @@ pipeline{
 		      				 sh "docker push"
 		      				 //customImage.push()
 				 	       		}
+				 	       		}
      			    //def browsers = ['chrome', 'firefox']
                     //for (int i = 0; i < browsers.size(); ++i) {
                     //}
       			    //sh "docker build -f ./account/Dockerfile -t artaneja13/kubernetes:account ./account"
-      			    		}
-      			    	}
 	 		}
 	 	  }
  	  
