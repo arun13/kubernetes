@@ -49,9 +49,8 @@ pipeline{
      						 def dockerRegistry = "https://hub.docker.com"
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
-		      				 withCredentials([string(credentialsId: '', variable: 'dockerPassword')]) {
-		      				 sh 'echo "push"'
-		      				 //sh "docker login -u ar.taneja13@gmail.com -p ${dockerHubPassword}"
+		      				 sh "docker login -u ar.taneja13@gmail.com -p arun1982"
+		      				 sh "docker push"
 		      				 //customImage.push()
 				 	       		}
      			    //def browsers = ['chrome', 'firefox']
