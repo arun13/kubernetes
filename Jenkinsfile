@@ -50,7 +50,7 @@ pipeline{
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/account:latest","./account/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
-		      				 sh "docker push artaneja13/kubernetes:account"
+		      				 sh "docker push artaneja13/account:latest"
 		      					 //customImage.push()
 		       				     //def browsers = ['chrome', 'firefox']
           			             //for (int i = 0; i < browsers.size(); ++i) {
@@ -68,7 +68,7 @@ pipeline{
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 docker.build("artaneja13/account-deposit:latest","./account-deposit/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
-		      				 sh "docker push artaneja13/kubernetes:account-deposit"
+		      				 sh "docker push artaneja13/account-deposit:latest"
 		      			}
 	 		}
 	 	  }
@@ -80,7 +80,7 @@ pipeline{
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/account-withdrawel:latest","./account-withdrawel/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
-		      				 sh "docker push artaneja13/kubernetes:account-withdrawel"
+		      				 sh "docker push artaneja13/account-withdrawel:latest"
 	  			}
 	    	}
 	  }
