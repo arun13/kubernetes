@@ -48,7 +48,7 @@ pipeline{
      				script{
      						 def dockerRegistry = "https://hub.docker.com"
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
-		     				 def customImage = docker.build("artaneja13/kubernetes:account","./account/")	
+		     				 def customImage = docker.build("artaneja13/account:latest","./account/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
 		      				 sh "docker push artaneja13/kubernetes:account"
 		      					 //customImage.push()
@@ -66,7 +66,7 @@ pipeline{
      			script{
      						 def dockerRegistry = "https://hub.docker.com"
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
-		     				 docker.build("artaneja13/kubernetes:account-deposit","./account-deposit/")	
+		     				 docker.build("artaneja13/account-deposit:latest","./account-deposit/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
 		      				 sh "docker push artaneja13/kubernetes:account-deposit"
 		      			}
@@ -78,7 +78,7 @@ pipeline{
      			script{
      						 def dockerRegistry = "https://hub.docker.com"
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
-		     				 def customImage = docker.build("artaneja13/kubernetes:account-withdrawel","./account-withdrawel/")	
+		     				 def customImage = docker.build("artaneja13/account-withdrawel:latest","./account-withdrawel/")	
 		      				 sh "docker login -u artaneja13 -p arun1982"
 		      				 sh "docker push artaneja13/kubernetes:account-withdrawel"
 	  			}

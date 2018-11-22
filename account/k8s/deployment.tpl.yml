@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: "account"
+  namespace: "default"
+  labels:
+    app: "account"
+    version: "1.0"    
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "account-service"
+    spec:
+      containers:
+      - name: info
+        image: https://hub.docker.com/r/artaneja13/kubernetes/tags/account-withdrawel
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "120Mi"
+            cpu: "120m"
+      restartPolicy: Always
