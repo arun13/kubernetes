@@ -89,7 +89,7 @@ pipeline{
    stage('Deploy to kubernetes') {
      			steps {
      			script{
-     		   				 sh "./account/deploy.sh"
+     		   				 sh "./account/k8s/deploy.sh"
 	  			}
 	    	}
 	  }
