@@ -85,5 +85,14 @@ pipeline{
 	    	}
 	  }
   }
+  
+   stage('Deploy to kubernetes') {
+     			steps {
+     			script{
+     		   				 sh "./account/deploy.sh"
+	  			}
+	    	}
+	  }
+   
 }
 }

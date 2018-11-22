@@ -3,7 +3,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: "account"
-  namespace: "default"
+  namespace: "kube-public"
   labels:
     app: "account"
     version: "1.0"    
@@ -12,11 +12,11 @@ spec:
   template:
     metadata:
       labels:
-        app: "account-service"
+        app: "account"
     spec:
       containers:
       - name: info
-        image: https://hub.docker.com/r/artaneja13/kubernetes/tags/account-withdrawel
+        image: https://hub.docker.com/r/artaneja13/account/tags/latest
         resources:
           requests:
             memory: "100Mi"
