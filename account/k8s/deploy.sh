@@ -1,2 +1,3 @@
- kubectl apply -f ./account/k8s/deployment.yml
- kubectl apply -f ./account/k8s/svc.yml
+#!/usr/bin/env bash
+ kubectl apply -f ./account/k8s/account-deployment.tpl.yml
+ kubectl apply -f ./account/k8s/account-service.tpl.yml

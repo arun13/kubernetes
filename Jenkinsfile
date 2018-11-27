@@ -4,7 +4,7 @@ pipeline{
     	    stage('Compile'){
     	        steps{
 		   	        withMaven(maven:'maven'){
-		   	         sh 'mvn clean compile'
+		   	         sh 'mvn clean compile -DskipTests=true'
     				}            
     	        }
     	    }
@@ -39,7 +39,7 @@ pipeline{
  			stage('Build') {
       			steps {
       				withMaven(maven:'maven'){
-        				sh 'mvn install'
+        				sh 'mvn install -DskipTests=true'
         			}
       		}	
 		  }
@@ -93,6 +93,5 @@ pipeline{
 	  			}
 	    	}
 	  }
-   
 }
 }
