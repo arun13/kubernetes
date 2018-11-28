@@ -18,7 +18,7 @@ spec:
       containers:
         - name: info
           image: "registry-1.docker.io/artaneja13/account:latest"
-          imagePullPolicy: Never
+          imagePullPolicy: Always
 #          resources:
 #            requests:
 #              memory: "100Mi"
