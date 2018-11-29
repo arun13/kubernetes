@@ -23,7 +23,7 @@ public class AccountController {
             message.append(" From host: " + ip);
             log.info("Account Service working on port "+server_port);
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         return message.toString();
     }

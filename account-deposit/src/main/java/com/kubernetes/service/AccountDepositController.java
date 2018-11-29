@@ -25,7 +25,7 @@ public class AccountDepositController {
             log.info("Account Deposit Service is working on port "+server_port);
 
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         return message.toString();
     }

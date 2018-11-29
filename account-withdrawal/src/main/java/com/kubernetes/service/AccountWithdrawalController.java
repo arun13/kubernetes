@@ -19,7 +19,7 @@ public class AccountWithdrawalController {
             message.append(" From host: " + ip);
             log.info("Hello this is account withdrawal service!");
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
         return message.toString();
     }
