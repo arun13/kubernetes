@@ -2,13 +2,13 @@ package com.kubernetes.service;
 
 import org.junit.Test;
 
-public class AccountWithdrawelControllerTest {
+public class AccountWithdrawalControllerTest {
 	
 	
 	@Test
 	public void hello()
 	{
-		AccountWithdrawelController test = new AccountWithdrawelController();
+		AccountWithdrawalController test = new AccountWithdrawalController();
 		test.hello();
 		
 	}
