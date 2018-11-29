@@ -12,8 +12,8 @@ import java.net.UnknownHostException;
 @RestController
 public class AccountController {
 
-    @Value("server.port")
-    String server_port;
+    @Value("${server.port}")
+    String serverPort;
 
     @RequestMapping("/account")
     public String hello() {
@@ -21,7 +21,7 @@ public class AccountController {
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message.append(" From host: " + ip);
-            log.info("Account Service working on port "+server_port);
+            log.info("Account Service working on port "+serverPort);
         } catch (UnknownHostException e) {
             log.error(e.getMessage());
         }

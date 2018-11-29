@@ -13,8 +13,8 @@ import java.net.UnknownHostException;
 public class AccountDepositController {
 
 
-    @Value("server.port")
-    String server_port;
+    @Value("${server.port}")
+    String serverPort;
 
     @RequestMapping("/account-deposit")
     public String hello() {
@@ -22,7 +22,7 @@ public class AccountDepositController {
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message.append(" From host: " + ip);
-            log.info("Account Deposit Service is working on port "+server_port);
+            log.info("Account Deposit Service is working on port "+serverPort);
 
         } catch (UnknownHostException e) {
             log.error(e.getMessage());
