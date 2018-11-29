@@ -13,6 +13,6 @@
  	<modules>
  		<module>account</module>
  		<module>account-deposit</module>
- 		<module>account-withdrawel</module>
+ 		<module>account-withdrawal</module>
  	</modules>
 </project>

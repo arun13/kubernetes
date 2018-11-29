@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AccountWithdrawelApplication {
+public class AccountWithdrawalApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AccountWithdrawelApplication.class, args);
+		SpringApplication.run(AccountWithdrawalApplication.class, args);
 	}
 }

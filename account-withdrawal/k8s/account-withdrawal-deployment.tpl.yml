@@ -1,0 +1,28 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: "account-withdrawal-deployment"
+  namespace: "kube-public"
+  labels:
+    app: "account-withdrawal-deployment"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "account-withdrawal"
+  template:
+    metadata:
+      labels:
+        app: "account-withdrawal"
+    spec:
+      containers:
+        - name: info
+          image: "registry-1.docker.io/artaneja13/account-withdrawal:latest"
+          imagePullPolicy: Always
+#          resources:
+#            requests:
+#              memory: "100Mi"
+#              cpu: "100m"
+#            limits:
+#              memory: "120Mi"
+#              cpu: "120m"

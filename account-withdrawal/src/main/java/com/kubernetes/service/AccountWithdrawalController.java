@@ -7,11 +7,11 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 @RestController
-public class AccountWithdrawelController {
+public class AccountWithdrawalController {
 
-    @RequestMapping("/account-withdrawel")
+    @RequestMapping("/account-withdrawal")
     public String hello() {
-        StringBuilder message = new StringBuilder("Hello account withdrawel!");
+        StringBuilder message = new StringBuilder("Hello this is account withdrawal service!");
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message.append(" From host: " + ip);

@@ -8,21 +8,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="account" />
         <module name="account-deposit" />
-        <module name="account-withdrawel" />
+        <module name="account-withdrawal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="account" target="1.8" />
       <module name="account-app" target="1.8" />
       <module name="account-deposit" target="1.8" />
-      <module name="account-withdrawel" target="1.8" />
+      <module name="account-withdrawal" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="account" options="-parameters" />
       <module name="account-deposit" options="-parameters" />
-      <module name="account-withdrawel" options="-parameters" />
+      <module name="account-withdrawal" options="-parameters" />
     </option>
   </component>
 </project>

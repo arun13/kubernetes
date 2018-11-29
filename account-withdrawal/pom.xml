@@ -12,7 +12,7 @@
        <version>1.0</version>
        <relativePath>..</relativePath>
   </parent>
-   <artifactId>account-withdrawel</artifactId>
+   <artifactId>account-withdrawal</artifactId>
    
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,8 +44,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>account-withdrawel</finalName>
+		<finalName>account-withdrawal</finalName>
 	</build>
-
-
 </project>
