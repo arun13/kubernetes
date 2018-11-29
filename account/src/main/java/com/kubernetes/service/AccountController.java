@@ -1,5 +1,6 @@
 package com.kubernetes.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
+@Slf4j
 @RestController
 public class AccountController {
 
@@ -19,7 +21,7 @@ public class AccountController {
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message.append(" From host: " + ip);
-            System.out.println("Account Service working on port "+server_port);
+            log.info("Account Service working on port "+server_port);
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
