@@ -80,7 +80,7 @@ pipeline{
 		     				 withEnv(["DOCKER_REGISTRY=${dockerRegistry}"]) {
 		     				 def customImage = docker.build("artaneja13/account-withdrawal:latest","./account-withdrawal/")
 		      				 sh "docker login -u artaneja13 -p arun1982"
-		      				 sh "docker push artaneja13/account-withdrawel:latest"
+		      				 sh "docker push artaneja13/account-withdrawal:latest"
 	  			}
 	    	}
 	  }
