@@ -98,7 +98,7 @@ pipeline {
         stage('Deploy  account deposit service to kubernetes') {
             steps {
                 script {
-                    sh "./account/k8s/deploy.sh"
+                    sh "./account-deposit/k8s/deploy.sh"
                 }
             }
         }
@@ -106,7 +106,7 @@ pipeline {
         stage('Deploy  account withdrawal to kubernetes') {
             steps {
                 script {
-                    sh "./account/k8s/deploy.sh"
+                    sh "./account-withdrawal/k8s/deploy.sh"
                 }
             }
         }
