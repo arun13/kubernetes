@@ -2,147 +2,147 @@
 
 
 properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: [
-[$class: 'hudson.model.StringParameterDefinition', name: 'DOCKER_CREDID',defaultValue: "docker_m08275@tsnr2.att.com"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'CONFIG_PLAYBOOK_CREDID',defaultValue: "git_mechId"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'PHASE', defaultValue: "BUILD_DEPLOY"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'TARGET_ENV', defaultValue: "DEV"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'GRM_ENV', defaultValue: ""],
-[$class: 'hudson.model.StringParameterDefinition', name: 'K8S_CLUSTER_URL',defaultValue: "https://zld04778.vci.att.com"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'K8S_CONTEXT',defaultValue: "default"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'K8S_USERNAME', defaultValue: "root"],
-[$class: 'hudson.model.PasswordParameterDefinition', name: 'K8S_PASSWORD', defaultValue: ""],
-[$class: 'hudson.model.PasswordParameterDefinition', name: 'K8S_TOKEN', defaultValue: ""],
-[$class: 'hudson.model.StringParameterDefinition', name: 'K8S_NAME',defaultValue: "DEV"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'K8S_PODS_REPLICAS',defaultValue: "2"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'K8S_SERVICE_ACCOUNT',defaultValue: "default"],
-[$class: 'hudson.model.BooleanParameterDefinition', name: 'USE_ROOT_NS',defaultValue: false],
-[$class: 'hudson.model.StringParameterDefinition', name: 'BROKER_URL',defaultValue: "http://zlp25163.vci.att.com:30120"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'PACT_USERNAME', defaultValue: "pactadmin"],
-[$class: 'hudson.model.PasswordParameterDefinition', name: 'PACT_PASSWORD', defaultValue: "pactadmin"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'GIT_REPO_FOLDER',defaultValue: ""],
-[$class: 'hudson.model.StringParameterDefinition', name: 'DEV_TEST_GIT_APP',defaultValue: ""],
-[$class: 'hudson.model.StringParameterDefinition', name: 'DEV_TEST_SERVER_URL',defaultValue: ""],
-[$class: 'hudson.model.StringParameterDefinition', name: 'LISA_PATH', defaultValue: "/opt/app/workload/tools/itko/server/9.5.1/Projects/"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'TEST_CASE_PATH',defaultValue: "/Tests/HelloTest.tst"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'SUITE_CASE_PATH', defaultValue: "/Tests/Suites/AllTestsSuite.ste"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'CONFIG_PATH', defaultValue: "/Configs/project.config"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'STAGING_DOC_PATH',defaultValue: "/Tests/StagingDocs/Run1User1Cycle.stg"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'SONAR_BREAKER_SKIP',defaultValue: "True"],
-[$class: 'hudson.model.StringParameterDefinition', name: 'ROUTE_OFFER',defaultValue: ""]  
-]]]) 
+        [$class: 'hudson.model.StringParameterDefinition', name: 'DOCKER_CREDID', defaultValue: "docker_m08275@tsnr2.att.com"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'CONFIG_PLAYBOOK_CREDID', defaultValue: "git_mechId"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'PHASE', defaultValue: "BUILD_DEPLOY"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'TARGET_ENV', defaultValue: "DEV"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'GRM_ENV', defaultValue: ""],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'K8S_CLUSTER_URL', defaultValue: "https://zld04778.vci.att.com"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'K8S_CONTEXT', defaultValue: "default"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'K8S_USERNAME', defaultValue: "root"],
+        [$class: 'hudson.model.PasswordParameterDefinition', name: 'K8S_PASSWORD', defaultValue: ""],
+        [$class: 'hudson.model.PasswordParameterDefinition', name: 'K8S_TOKEN', defaultValue: ""],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'K8S_NAME', defaultValue: "DEV"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'K8S_PODS_REPLICAS', defaultValue: "2"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'K8S_SERVICE_ACCOUNT', defaultValue: "default"],
+        [$class: 'hudson.model.BooleanParameterDefinition', name: 'USE_ROOT_NS', defaultValue: false],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'BROKER_URL', defaultValue: "http://zlp25163.vci.att.com:30120"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'PACT_USERNAME', defaultValue: "pactadmin"],
+        [$class: 'hudson.model.PasswordParameterDefinition', name: 'PACT_PASSWORD', defaultValue: "pactadmin"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'GIT_REPO_FOLDER', defaultValue: ""],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'DEV_TEST_GIT_APP', defaultValue: ""],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'DEV_TEST_SERVER_URL', defaultValue: ""],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'LISA_PATH', defaultValue: "/opt/app/workload/tools/itko/server/9.5.1/Projects/"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'TEST_CASE_PATH', defaultValue: "/Tests/HelloTest.tst"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'SUITE_CASE_PATH', defaultValue: "/Tests/Suites/AllTestsSuite.ste"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'CONFIG_PATH', defaultValue: "/Configs/project.config"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'STAGING_DOC_PATH', defaultValue: "/Tests/StagingDocs/Run1User1Cycle.stg"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'SONAR_BREAKER_SKIP', defaultValue: "True"],
+        [$class: 'hudson.model.StringParameterDefinition', name: 'ROUTE_OFFER', defaultValue: ""]
+]]])
 
 /**
-    jdk1.8 = fixed name for java
-    M3 = fixed name for maven
-    general_maven_settings = fixed name for maven settings Jenkins managed file
-*/
+ jdk1.8 = fixed name for java
+ M3 = fixed name for maven
+ general_maven_settings = fixed name for maven settings Jenkins managed file
+ */
 
 echo "Build branch: ${env.BRANCH_NAME}"
 
 node("docker") {
-	stage 'Checkout'
-	checkout scm
-	
-	pom = readMavenPom file: 'pom.xml'
-	PROJECT_NAME = pom.groupId ?: pom.parent.groupId+ ":" + pom.artifactId;
-	SERVICE_NAME=pom.artifactId;
-	VERSION=pom.version;
-	LABEL_VERSION=pom.version.replaceAll(".", "-");
-	echo "LabelVerion: " + LABEL_VERSION
-	NAMESPACE=pom.groupId ?: pom.parent.groupId;
-	
-	env.GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
-	echo "GIT_COMMIT: ${GIT_COMMIT}"
+    stage 'Checkout'
+    checkout scm
 
-	def dockerRegistry = "https://dockercentral.it.att.com:5100"
+    pom = readMavenPom file: 'pom.xml'
+    PROJECT_NAME = pom.groupId ?: pom.parent.groupId + ":" + pom.artifactId;
+    SERVICE_NAME = pom.artifactId;
+    VERSION = pom.version;
+    LABEL_VERSION = pom.version.replaceAll(".", "-");
+    echo "LabelVerion: " + LABEL_VERSION
+    NAMESPACE = pom.groupId ?: pom.parent.groupId;
 
-	TARGET_ENV=TARGET_ENV.toLowerCase()
-	if ("${TARGET_ENV}" == "prod") {
-		KUBE_NAMESPACE="com-att-custnetcare-tsnr"
-	} else {
-		KUBE_NAMESPACE="com-att-tsnr2"
-	}
-	if (!params.USE_ROOT_NS) {
-		KUBE_NAMESPACE="${KUBE_NAMESPACE}-${TARGET_ENV}"
-	}
-	if ("${params.GRM_ENV}" != "") {
-		GRM_ENV = params.GRM_ENV.toUpperCase()
-	} else {
-		GRM_ENV = params.TARGET_ENV.toUpperCase()
-	}
-	KUBECTL="/opt/app/kubernetes/v1.5.2/bin/kubectl"
-	if ("${K8S_TOKEN}" != "") {
-		KUBECTL_OPTS = "--server=${K8S_CLUSTER_URL} --insecure-skip-tls-verify=true --token=${K8S_TOKEN}"
-	} else {
-		KUBECTL_OPTS = "--server=${K8S_CLUSTER_URL} --insecure-skip-tls-verify=true --password=${K8S_PASSWORD} --username=${K8S_USERNAME}"
-	}
-	
-	env.IMAGE_NAME=pom.properties['docker.registry']+"/"+NAMESPACE+"/"+pom.artifactId+":latest"
-	echo "Artifact: " + PROJECT_NAME
-	//env.DOCKER_HOST="tcp://localhost:4243"
-	// env.DOCKER_HOST="unix:///var/run/docker.sock"
-    env.DOCKER_CONFIG="${WORKSPACE}/.docker"
-	def branchName
-	
-	//IST Variable
-	LISA_PATH_NEW="${LISA_PATH}"+SERVICE_NAME
-	
-	// Create kubectl.conf  file here from Pipeline properties provided.
-	
-	withEnv(["PATH=${env.PATH}:${tool 'M3'}/bin:${tool 'jdk1.8'}/bin", "JAVA_HOME=${tool 'jdk1.8'}", "MAVEN_HOME=${tool 'M3'}"]) { 
-			
-		echo "JAVA_HOME=${env.JAVA_HOME}"
-		echo "MAVEN_HOME=${env.MAVEN_HOME}"
-		echo "PATH=${env.PATH}"
+    env.GIT_COMMIT = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+    echo "GIT_COMMIT: ${GIT_COMMIT}"
 
-		wrap([$class: 'ConfigFileBuildWrapper', managedFiles: [
-			[fileId: 'maven-settings.xml', variable: 'MAVEN_SETTINGS'],
-			[fileId: 'sonar-secret.txt', variable: 'SONAR_SECRET'],
-			[fileId: 'sonar.properties', variable: 'SONAR_PROPERTIES']
-			]]) {
-			
-			 branchName = (env.BRANCH_NAME ?: "master").replaceAll(/[^0-9a-zA-Z_]/, "-")
-			
-			
-			if ("${PHASE}" == "BUILD" || "${PHASE}" == "BUILD_DEPLOY" ) { 
-				stage 'Compile' 
-		    	sh 'mvn -DskipTests -Dmaven.test.skip=true -s $MAVEN_SETTINGS -Ddummy.prop=$SONAR_PROPERTIES clean compile' 
- 
-				stage 'Unit Test' 
-	    		//sh 'mvn -s $MAVEN_SETTINGS test'
- 
-				stage 'Package' 
-		    	sh 'mvn -DskipTests -Dmaven.test.skip=true -s $MAVEN_SETTINGS package' 
- 
-				stage 'Verify' 
-		    	sh 'mvn -DskipTests -Dmaven.test.skip=true -s $MAVEN_SETTINGS verify' 
- 
-				stage 'Quality Scan and QG1'
-					def props = readProperties file: "${env.SONAR_PROPERTIES}"
-					sh 'mvn -X help:effective-settings help:system help:effective-pom  -Dsonar.host.url=' + props['sonar.host.url'] + ' -Dsonar.att.motsid=' + props['sonar.att.motsid'] + ' -Dsonar.projectKey=' + props['sonar.att.motsid'] + ':' + PROJECT_NAME + ' -Dsonar.projectName=' + props['sonar.att.motsid'] + ':' + PROJECT_NAME + ' -Dsonar.projectDescription=' + props['sonar.att.motsid'] + ':' + PROJECT_NAME + ' -Dsonar.login=' + props['sonar.login'] + ' -Dsonar.password=' + props['sonar.password'] + ' -Dsonar.att.view.type=' + props['sonar.att.view.type'] + ' -Dsonar.att.dependencycheck.tattletale.java.command=' + props['sonar.att.dependencycheck.tattletale.java.command'] + ' -Dsonar.att.dependencycheck.tattletale.sourceDirectory.path=' + props['sonar.att.dependencycheck.tattletale.sourceDirectory.path'] + ' -Dsonar.att.dependencycheck.tattletale.destinationDirectory.path=' + props['sonar.att.dependencycheck.tattletale.destinationDirectory.path'] + ' -Dsonar.att.tattletale.base.folder=' + props['sonar.att.tattletale.base.folder'] +' -Dsonar.att.tattletale.binaries.folder=' + props['sonar.att.tattletale.binaries.folder'] +' -Dsonar.att.tattletale.enabled=' + props['sonar.att.tattletale.enabled']+ ' -Dsonar.buildbreaker.skip=${SONAR_BREAKER_SKIP} -s $MAVEN_SETTINGS sonar:sonar'
-				
-	            if ("${DEV_TEST_GIT_APP}" != "") { 
-				
-				stage("CADev Repo Update") {
-				   def GitinvokeURL = "${DEV_TEST_GIT_APP}/gitapp/service/git/push?gitUrl=${GIT_REPO_FOLDER}/${SERVICE_NAME}"
-				   sh "curl -i -X GET  \'${GitinvokeURL}\'"
-				}
-								
- 				stage("Component Test Using CA DEV TEST") {
-				
-				   def invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runTest?testCasePath=${LISA_PATH_NEW}${TEST_CASE_PATH}&stagingDocPath=${LISA_PATH_NEW}${STAGING_DOC_PATH}"
-				   sh "curl -i \'${invokeURL}\'"
-				   invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runSuite?suitePath=${LISA_PATH_NEW}${SUITE_CASE_PATH}&configPath=${LISA_PATH_NEW}${CONFIG_PATH}"
-				   sh "curl -i \'${invokeURL}\'"
-				} 
-				}
-				
-				stage 'Component Test Using Mockito'
-		    	sh 'mvn -s $MAVEN_SETTINGS -Dtest=ComponentTest test'
-		    	
-				stage 'Publish Artifact'
-				//sh 'docker ps'
-	    		withEnv(['DOCKER_CONFIG=${WORKSPACE}/.docker',"DOCKER_REGISTRY=${dockerRegistry}"]) {
+    def dockerRegistry = "https://dockercentral.it.att.com:5100"
+
+    TARGET_ENV = TARGET_ENV.toLowerCase()
+    if ("${TARGET_ENV}" == "prod") {
+        KUBE_NAMESPACE = "com-att-custnetcare-tsnr"
+    } else {
+        KUBE_NAMESPACE = "com-att-tsnr2"
+    }
+    if (!params.USE_ROOT_NS) {
+        KUBE_NAMESPACE = "${KUBE_NAMESPACE}-${TARGET_ENV}"
+    }
+    if ("${params.GRM_ENV}" != "") {
+        GRM_ENV = params.GRM_ENV.toUpperCase()
+    } else {
+        GRM_ENV = params.TARGET_ENV.toUpperCase()
+    }
+    KUBECTL = "/opt/app/kubernetes/v1.5.2/bin/kubectl"
+    if ("${K8S_TOKEN}" != "") {
+        KUBECTL_OPTS = "--server=${K8S_CLUSTER_URL} --insecure-skip-tls-verify=true --token=${K8S_TOKEN}"
+    } else {
+        KUBECTL_OPTS = "--server=${K8S_CLUSTER_URL} --insecure-skip-tls-verify=true --password=${K8S_PASSWORD} --username=${K8S_USERNAME}"
+    }
+
+    env.IMAGE_NAME = pom.properties['docker.registry'] + "/" + NAMESPACE + "/" + pom.artifactId + ":latest"
+    echo "Artifact: " + PROJECT_NAME
+    //env.DOCKER_HOST="tcp://localhost:4243"
+    // env.DOCKER_HOST="unix:///var/run/docker.sock"
+    env.DOCKER_CONFIG = "${WORKSPACE}/.docker"
+    def branchName
+
+    //IST Variable
+    LISA_PATH_NEW = "${LISA_PATH}" + SERVICE_NAME
+
+    // Create kubectl.conf  file here from Pipeline properties provided.
+
+    withEnv(["PATH=${env.PATH}:${tool 'M3'}/bin:${tool 'jdk1.8'}/bin", "JAVA_HOME=${tool 'jdk1.8'}", "MAVEN_HOME=${tool 'M3'}"]) {
+
+        echo "JAVA_HOME=${env.JAVA_HOME}"
+        echo "MAVEN_HOME=${env.MAVEN_HOME}"
+        echo "PATH=${env.PATH}"
+
+        wrap([$class: 'ConfigFileBuildWrapper', managedFiles: [
+                [fileId: 'maven-settings.xml', variable: 'MAVEN_SETTINGS'],
+                [fileId: 'sonar-secret.txt', variable: 'SONAR_SECRET'],
+                [fileId: 'sonar.properties', variable: 'SONAR_PROPERTIES']
+        ]]) {
+
+            branchName = (env.BRANCH_NAME ?: "master").replaceAll(/[^0-9a-zA-Z_]/, "-")
+
+
+            if ("${PHASE}" == "BUILD" || "${PHASE}" == "BUILD_DEPLOY") {
+                stage 'Compile'
+                sh 'mvn -DskipTests -Dmaven.test.skip=true -s $MAVEN_SETTINGS -Ddummy.prop=$SONAR_PROPERTIES clean compile'
+
+                stage 'Unit Test'
+                //sh 'mvn -s $MAVEN_SETTINGS test'
+
+                stage 'Package'
+                sh 'mvn -DskipTests -Dmaven.test.skip=true -s $MAVEN_SETTINGS package'
+
+                stage 'Verify'
+                sh 'mvn -DskipTests -Dmaven.test.skip=true -s $MAVEN_SETTINGS verify'
+
+                stage 'Quality Scan and QG1'
+                def props = readProperties file: "${env.SONAR_PROPERTIES}"
+                sh 'mvn -X help:effective-settings help:system help:effective-pom  -Dsonar.host.url=' + props['sonar.host.url'] + ' -Dsonar.att.motsid=' + props['sonar.att.motsid'] + ' -Dsonar.projectKey=' + props['sonar.att.motsid'] + ':' + PROJECT_NAME + ' -Dsonar.projectName=' + props['sonar.att.motsid'] + ':' + PROJECT_NAME + ' -Dsonar.projectDescription=' + props['sonar.att.motsid'] + ':' + PROJECT_NAME + ' -Dsonar.login=' + props['sonar.login'] + ' -Dsonar.password=' + props['sonar.password'] + ' -Dsonar.att.view.type=' + props['sonar.att.view.type'] + ' -Dsonar.att.dependencycheck.tattletale.java.command=' + props['sonar.att.dependencycheck.tattletale.java.command'] + ' -Dsonar.att.dependencycheck.tattletale.sourceDirectory.path=' + props['sonar.att.dependencycheck.tattletale.sourceDirectory.path'] + ' -Dsonar.att.dependencycheck.tattletale.destinationDirectory.path=' + props['sonar.att.dependencycheck.tattletale.destinationDirectory.path'] + ' -Dsonar.att.tattletale.base.folder=' + props['sonar.att.tattletale.base.folder'] + ' -Dsonar.att.tattletale.binaries.folder=' + props['sonar.att.tattletale.binaries.folder'] + ' -Dsonar.att.tattletale.enabled=' + props['sonar.att.tattletale.enabled'] + ' -Dsonar.buildbreaker.skip=${SONAR_BREAKER_SKIP} -s $MAVEN_SETTINGS sonar:sonar'
+
+                if ("${DEV_TEST_GIT_APP}" != "") {
+
+                    stage("CADev Repo Update") {
+                        def GitinvokeURL = "${DEV_TEST_GIT_APP}/gitapp/service/git/push?gitUrl=${GIT_REPO_FOLDER}/${SERVICE_NAME}"
+                        sh "curl -i -X GET  \'${GitinvokeURL}\'"
+                    }
+
+                    stage("Component Test Using CA DEV TEST") {
+
+                        def invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runTest?testCasePath=${LISA_PATH_NEW}${TEST_CASE_PATH}&stagingDocPath=${LISA_PATH_NEW}${STAGING_DOC_PATH}"
+                        sh "curl -i \'${invokeURL}\'"
+                        invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runSuite?suitePath=${LISA_PATH_NEW}${SUITE_CASE_PATH}&configPath=${LISA_PATH_NEW}${CONFIG_PATH}"
+                        sh "curl -i \'${invokeURL}\'"
+                    }
+                }
+
+                stage 'Component Test Using Mockito'
+                sh 'mvn -s $MAVEN_SETTINGS -Dtest=ComponentTest test'
+
+                stage 'Publish Artifact'
+                //sh 'docker ps'
+                withEnv(['DOCKER_CONFIG=${WORKSPACE}/.docker', "DOCKER_REGISTRY=${dockerRegistry}"]) {
                     withCredentials([usernamePassword(credentialsId: env.DOCKER_CREDID, usernameVariable: 'username', passwordVariable: 'password')]) {
                         sh '''
                             cp ${WORKSPACE}/src/main/docker/Dockerfile ${WORKSPACE}/target
@@ -153,116 +153,116 @@ node("docker") {
                         '''
                     }
                 }
-	    	
-	    	} 
- 
-			if ("${PHASE}" == "BUILD_DEPLOY" || "${PHASE}" == "DEPLOY" ) { 
-				 // deploy to k8s
-				 stage ('Deploy to Staging') {
-						withEnv([
-                        "APP_NAME=${SERVICE_NAME}",
-                        "K8S_CTX=${K8S_CONTEXT}",
-                        "APP_NS=${KUBE_NAMESPACE}",
-                        "TARGET_ENV=${TARGET_ENV}",
-						"ROUTE_OFFER=${ROUTE_OFFER}",
-                        "GRM_ENV=${GRM_ENV}",
-                        "IMAGE_NAME=${IMAGE_NAME}",
-                        "VERSION=${VERSION}",
-                        "LABEL_VERSION=${LABEL_VERSION}",
-                        "REPLICA_COUNT=${K8S_PODS_REPLICAS}",
-                        "SERVICE_ACCOUNT=${K8S_SERVICE_ACCOUNT}",
-                        "KUBECTL=${KUBECTL}",
-                        "KUBECTL_OPTS=${KUBECTL_OPTS}"
-						]) {
-							sh "./k8s/deploy.sh"
-						}
-					}
-			// 	if (branchName == 'master') {
-			// 		stage ('Deploy to Staging') {
-			// 			withEnv([
-            //             "APP_NAME=${SERVICE_NAME}",
-            //             "K8S_CTX=${K8S_CONTEXT}",
-            //             "APP_NS=${KUBE_NAMESPACE}",
-            //             "TARGET_ENV=${TARGET_ENV}",
-            //             "GRM_ENV=${GRM_ENV}",
-            //             "IMAGE_NAME=${IMAGE_NAME}",
-            //             "VERSION=${VERSION}",
-            //             "LABEL_VERSION=${LABEL_VERSION}",
-            //             "REPLICA_COUNT=${K8S_PODS_REPLICAS}",
-            //             "SERVICE_ACCOUNT=${K8S_SERVICE_ACCOUNT}",
-            //             "KUBECTL=${KUBECTL}",
-            //             "KUBECTL_OPTS=${KUBECTL_OPTS}"
-			// 			]) {
-			// 			sh "./k8s/deploy.sh"
-			// 		}
-			// 	}
-            //
-			// } else if (branchName=="develop") {
-			// 		stage ('Deploy to Development') {
-			// 			withEnv([
-            //             "APP_NAME=${SERVICE_NAME}",
-            //             "K8S_CTX=${K8S_CONTEXT}",
-            //             "APP_NS=${KUBE_NAMESPACE}",
-            //             "TARGET_ENV=${TARGET_ENV}",
-            //             "GRM_ENV=${GRM_ENV}",
-            //             "VERSION=${VERSION}",
-            //             "LABEL_VERSION=${LABEL_VERSION}",
-            //             "REPLICA_COUNT=${K8S_PODS_REPLICAS}",
-            //             "IMAGE_NAME=${IMAGE_NAME}",
-            //             "SERVICE_ACCOUNT=${K8S_SERVICE_ACCOUNT}",
-            //             "KUBECTL=${KUBECTL}",
-            //             "KUBECTL_OPTS=${KUBECTL_OPTS}"
-			// 			]) {
-			// 			sh "./k8s/deploy.sh"
-			// 		}
-			// 	}
-			// }
-	    	} 
-			
-			 if ( "${PHASE}" == "CONTRACT_GENERATE") { 
-              stage 'Contract Generate Publish and QG2'
-              sh 'mvn -s $MAVEN_SETTINGS -Dtest=PactTestSuit test -DBROKER_URL=${BROKER_URL} -DuserName=${PACT_USERNAME} -Dpassword=${PACT_PASSWORD}' 
-              sh 'mvn -s $MAVEN_SETTINGS pact:publish -DBROKER_URL=${BROKER_URL} -DuserName=${PACT_USERNAME} -Dpassword=${PACT_PASSWORD}' 
-			}
-			
-            if ("${PHASE}" == "CONTRACT_VERIFY" ) {
-               stage ('Contract Verify' ){
-                 withEnv([
-                        "APP_NAME=${SERVICE_NAME}",
-                        "K8S_CTX=${K8S_CONTEXT}",
-                        "APP_NS=${KUBE_NAMESPACE}",
-                        "KUBECTL=${KUBECTL}",
-                        "KUBECTL_OPTS=${KUBECTL_OPTS}"
-						]) {
-						def CLUSTER_URL=K8S_CLUSTER_URL.substring(8)
-						
-			NODE_PORT = sh (
-                     script: '${KUBECTL}  get service ${APP_NAME} --namespace ${APP_NS} ${KUBECTL_OPTS} --output jsonpath={.spec.ports[*].nodePort}',
-                      returnStdout: true
-                      ).trim()
-              sh "mvn -s $MAVEN_SETTINGS pact:verify -DBROKER_URL=${BROKER_URL} -DuserName=${PACT_USERNAME} -Dpassword=${PACT_PASSWORD} -DAPP_URL=${CLUSTER_URL} -DAPP_PORT=${NODE_PORT}"
-             }
-             }
-             }
-             
-           if ("${PHASE}" == "INTEGRATION_TEST" || "${PHASE}" == "IST" || "${PHASE}" == "DEPLOY_IST"  ) {
-			
-				stage("CADev Repo Update") {
-				   def GitinvokeURL = "${DEV_TEST_GIT_APP}/gitapp/service/git/push?gitUrl=${GIT_REPO_FOLDER}/${SERVICE_NAME}"
-				   sh "curl -i -X GET  \'${GitinvokeURL}\'"
-				}
-				
-				stage("Functional Test") {
 
-				   def invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runTest?testCasePath=${LISA_PATH_NEW}${TEST_CASE_PATH}&stagingDocPath=${LISA_PATH_NEW}${STAGING_DOC_PATH}"
-				   sh "curl -i \'${invokeURL}\'"
-				   invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runSuite?suitePath=${LISA_PATH_NEW}${SUITE_CASE_PATH}&configPath=${LISA_PATH_NEW}${CONFIG_PATH}"
-				   sh "curl -i \'${invokeURL}\'"
-				   
-				   
-				}
-			}
- 
-	}
-}
+            }
+
+            if ("${PHASE}" == "BUILD_DEPLOY" || "${PHASE}" == "DEPLOY") {
+                // deploy to k8s
+                stage('Deploy to Staging') {
+                    withEnv([
+                            "APP_NAME=${SERVICE_NAME}",
+                            "K8S_CTX=${K8S_CONTEXT}",
+                            "APP_NS=${KUBE_NAMESPACE}",
+                            "TARGET_ENV=${TARGET_ENV}",
+                            "ROUTE_OFFER=${ROUTE_OFFER}",
+                            "GRM_ENV=${GRM_ENV}",
+                            "IMAGE_NAME=${IMAGE_NAME}",
+                            "VERSION=${VERSION}",
+                            "LABEL_VERSION=${LABEL_VERSION}",
+                            "REPLICA_COUNT=${K8S_PODS_REPLICAS}",
+                            "SERVICE_ACCOUNT=${K8S_SERVICE_ACCOUNT}",
+                            "KUBECTL=${KUBECTL}",
+                            "KUBECTL_OPTS=${KUBECTL_OPTS}"
+                    ]) {
+                        sh "./k8s/deploy.sh"
+                    }
+                }
+                // 	if (branchName == 'master') {
+                // 		stage ('Deploy to Staging') {
+                // 			withEnv([
+                //             "APP_NAME=${SERVICE_NAME}",
+                //             "K8S_CTX=${K8S_CONTEXT}",
+                //             "APP_NS=${KUBE_NAMESPACE}",
+                //             "TARGET_ENV=${TARGET_ENV}",
+                //             "GRM_ENV=${GRM_ENV}",
+                //             "IMAGE_NAME=${IMAGE_NAME}",
+                //             "VERSION=${VERSION}",
+                //             "LABEL_VERSION=${LABEL_VERSION}",
+                //             "REPLICA_COUNT=${K8S_PODS_REPLICAS}",
+                //             "SERVICE_ACCOUNT=${K8S_SERVICE_ACCOUNT}",
+                //             "KUBECTL=${KUBECTL}",
+                //             "KUBECTL_OPTS=${KUBECTL_OPTS}"
+                // 			]) {
+                // 			sh "./k8s/deploy.sh"
+                // 		}
+                // 	}
+                //
+                // } else if (branchName=="develop") {
+                // 		stage ('Deploy to Development') {
+                // 			withEnv([
+                //             "APP_NAME=${SERVICE_NAME}",
+                //             "K8S_CTX=${K8S_CONTEXT}",
+                //             "APP_NS=${KUBE_NAMESPACE}",
+                //             "TARGET_ENV=${TARGET_ENV}",
+                //             "GRM_ENV=${GRM_ENV}",
+                //             "VERSION=${VERSION}",
+                //             "LABEL_VERSION=${LABEL_VERSION}",
+                //             "REPLICA_COUNT=${K8S_PODS_REPLICAS}",
+                //             "IMAGE_NAME=${IMAGE_NAME}",
+                //             "SERVICE_ACCOUNT=${K8S_SERVICE_ACCOUNT}",
+                //             "KUBECTL=${KUBECTL}",
+                //             "KUBECTL_OPTS=${KUBECTL_OPTS}"
+                // 			]) {
+                // 			sh "./k8s/deploy.sh"
+                // 		}
+                // 	}
+                // }
+            }
+
+            if ("${PHASE}" == "CONTRACT_GENERATE") {
+                stage 'Contract Generate Publish and QG2'
+                sh 'mvn -s $MAVEN_SETTINGS -Dtest=PactTestSuit test -DBROKER_URL=${BROKER_URL} -DuserName=${PACT_USERNAME} -Dpassword=${PACT_PASSWORD}'
+                sh 'mvn -s $MAVEN_SETTINGS pact:publish -DBROKER_URL=${BROKER_URL} -DuserName=${PACT_USERNAME} -Dpassword=${PACT_PASSWORD}'
+            }
+
+            if ("${PHASE}" == "CONTRACT_VERIFY") {
+                stage('Contract Verify') {
+                    withEnv([
+                            "APP_NAME=${SERVICE_NAME}",
+                            "K8S_CTX=${K8S_CONTEXT}",
+                            "APP_NS=${KUBE_NAMESPACE}",
+                            "KUBECTL=${KUBECTL}",
+                            "KUBECTL_OPTS=${KUBECTL_OPTS}"
+                    ]) {
+                        def CLUSTER_URL = K8S_CLUSTER_URL.substring(8)
+
+                        NODE_PORT = sh(
+                                script: '${KUBECTL}  get service ${APP_NAME} --namespace ${APP_NS} ${KUBECTL_OPTS} --output jsonpath={.spec.ports[*].nodePort}',
+                                returnStdout: true
+                        ).trim()
+                        sh "mvn -s $MAVEN_SETTINGS pact:verify -DBROKER_URL=${BROKER_URL} -DuserName=${PACT_USERNAME} -Dpassword=${PACT_PASSWORD} -DAPP_URL=${CLUSTER_URL} -DAPP_PORT=${NODE_PORT}"
+                    }
+                }
+            }
+
+            if ("${PHASE}" == "INTEGRATION_TEST" || "${PHASE}" == "IST" || "${PHASE}" == "DEPLOY_IST") {
+
+                stage("CADev Repo Update") {
+                    def GitinvokeURL = "${DEV_TEST_GIT_APP}/gitapp/service/git/push?gitUrl=${GIT_REPO_FOLDER}/${SERVICE_NAME}"
+                    sh "curl -i -X GET  \'${GitinvokeURL}\'"
+                }
+
+                stage("Functional Test") {
+
+                    def invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runTest?testCasePath=${LISA_PATH_NEW}${TEST_CASE_PATH}&stagingDocPath=${LISA_PATH_NEW}${STAGING_DOC_PATH}"
+                    sh "curl -i \'${invokeURL}\'"
+                    invokeURL = "${DEV_TEST_SERVER_URL}/lisa-invoke/runSuite?suitePath=${LISA_PATH_NEW}${SUITE_CASE_PATH}&configPath=${LISA_PATH_NEW}${CONFIG_PATH}"
+                    sh "curl -i \'${invokeURL}\'"
+
+
+                }
+            }
+
+        }
+    }
 }

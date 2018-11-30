@@ -22,7 +22,7 @@ public class AccountDepositController {
         try {
             InetAddress ip = InetAddress.getLocalHost();
             message.append(" From host: " + ip);
-            log.info("Account Deposit Service is working on port "+serverPort);
+            log.info("Account Deposit Service is working on port " + serverPort);
 
         } catch (UnknownHostException e) {
             log.error(e.getMessage());
