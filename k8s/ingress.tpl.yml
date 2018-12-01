@@ -1,0 +1,23 @@
+look like this:
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: account-app-ingress
+spec:
+  backend:
+    serviceName: other
+    servicePort: 8080
+  rules:
+    - host: kubernetes.com
+      http:
+        paths:/account
+          - backend:
+              serviceName: account
+              servicePort: 8080
+    - host: kubernetes.com
+      http:
+        paths:
+          - path: /account-deposit
+            backend:
+              serviceName: account-deposit
+              servicePort: 8080
