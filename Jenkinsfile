@@ -110,5 +110,12 @@ pipeline {
                 }
             }
         }
+        stage('Deploy  account-app ingress controller to kubernetes') {
+            steps {
+                script {
+                    sh "./k8s/deploy.sh"
+                }
+            }
+        }
     }
 }
