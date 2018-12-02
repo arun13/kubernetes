@@ -3,19 +3,21 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: account-app-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   backend:
     serviceName: other
     servicePort: 8080
   rules:
-    - host: kubernetes.com
+    - host: myweb.com
       http:
         paths:
           - path: /account
             backend:
               serviceName: account
               servicePort: 8080
-    - host: kubernetes.com
+    - host: myweb.com
       http:
         paths:
           - path: /account-deposit
