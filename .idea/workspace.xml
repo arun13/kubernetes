@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5845a998-69ea-44e5-9b26-b3117aa6cf39" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/account-deposit/k8s/account-deposit-deployment.tpl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-deposit/k8s/account-deposit-deployment.tpl.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account-withdrawal/k8s/account-withdrawal-deployment.tpl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account-withdrawal/k8s/account-withdrawal-deployment.tpl.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/k8s/account-deployment.tpl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/account/k8s/account-deployment.tpl.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/ingress.tpl.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/ingress.tpl.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/account-deposit/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,31 +27,16 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="215" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="account-app" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/account-deposit/k8s/account-deposit-deployment.tpl.yml">
+        <entry file="file://$PROJECT_DIR$/k8s/ingress.tpl.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account/k8s/account-deployment.tpl.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account-withdrawal/k8s/account-withdrawal-deployment.tpl.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="270">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -89,13 +73,13 @@
         <option value="$PROJECT_DIR$/account-withdrawal/k8s/deploy.sh" />
         <option value="$PROJECT_DIR$/account-deposit/k8s/deploy.sh" />
         <option value="$PROJECT_DIR$/account-deposit/ClusterIp.txt" />
-        <option value="$PROJECT_DIR$/k8s/ingress.tpl.yml" />
         <option value="$PROJECT_DIR$/account/k8s/account-service.tpl.yml" />
         <option value="$PROJECT_DIR$/k8s/deploy.sh" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/account-withdrawal/k8s/account-withdrawal-deployment.tpl.yml" />
         <option value="$PROJECT_DIR$/account/k8s/account-deployment.tpl.yml" />
         <option value="$PROJECT_DIR$/account-deposit/k8s/account-deposit-deployment.tpl.yml" />
+        <option value="$PROJECT_DIR$/k8s/ingress.tpl.yml" />
       </list>
     </option>
   </component>
@@ -130,55 +114,6 @@
             <path>
               <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-              <item name="k8s" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account-deposit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account-deposit" type="462c0819:PsiDirectoryNode" />
-              <item name="k8s" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account-withdrawal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="account-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kubernetes" type="462c0819:PsiDirectoryNode" />
-              <item name="account-withdrawal" type="462c0819:PsiDirectoryNode" />
               <item name="k8s" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -335,11 +270,11 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26510066" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.26442954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info active="true" id="Favorites" order="4" sideWeight="0.5021097" side_tool="true" visible="true" weight="0.26442954" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
@@ -555,13 +490,6 @@
     <entry file="file://$PROJECT_DIR$/account/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/ingress.tpl.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/account/k8s/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -590,7 +518,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account-withdrawal/k8s/account-withdrawal-deployment.tpl.yml">
+    <entry file="file://$PROJECT_DIR$/account-deposit/k8s/account-deposit-deployment.tpl.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
@@ -604,10 +532,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/account-deposit/k8s/account-deposit-deployment.tpl.yml">
+    <entry file="file://$PROJECT_DIR$/account-withdrawal/k8s/account-withdrawal-deployment.tpl.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/ingress.tpl.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>

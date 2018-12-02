@@ -10,8 +10,9 @@ spec:
   rules:
     - host: kubernetes.com
       http:
-        paths:/account
-          - backend:
+        paths:
+          - path: /account
+            backend:
               serviceName: account
               servicePort: 8080
     - host: kubernetes.com
