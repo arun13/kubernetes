@@ -13,14 +13,21 @@ spec:
     - host: myweb.com
       http:
         paths:
-          - path: /account
+          - path: /
             backend:
               serviceName: account
-              servicePort: 8080
+              servicePort: 8082
     - host: myweb.com
       http:
         paths:
-          - path: /account-deposit
+          - path: /
             backend:
               serviceName: account-deposit
-              servicePort: 8080
+              servicePort: 8083
+    - host: myweb.com
+        http:
+          paths:
+              - path: /withdrawal
+                backend:
+                  serviceName: account-withdrawal
+                  servicePort: 8084
